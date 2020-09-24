@@ -121,7 +121,7 @@ model.add(Dense(1, kernel_initializer='normal'))
 model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
 tensorboard = TensorBoard(log_dir='D:\Tensorboard'.format(time()))
 
-model.fit(x_train, y_train,  # 21,64,57
+model.fit(x_train, y_train,  
                   epochs=8, batch_size=32,
                   validation_data=(x_val, y_val),
                   callbacks=[tensorboard])
